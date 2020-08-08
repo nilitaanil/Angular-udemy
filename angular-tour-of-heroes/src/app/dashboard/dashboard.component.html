@@ -1,0 +1,17 @@
+<!-- <You're using Angular interpolation binding within the *ngFor repeater to insert 
+    the current iteration's hero.id into each routerLink. 
+The DashboardComponent hero links do nothing at the moment.
+Now that the router has a route to HeroDetailComponent, 
+fix the dashboard hero links to navigate via the parameterized dashboard route.-->
+
+    
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4" routerLink="/detail/{{hero.id}}">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-hero-search></app-hero-search>

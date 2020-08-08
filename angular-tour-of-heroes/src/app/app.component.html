@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<!-- Add a <nav> element and, within that, an anchor element that, 
+    when clicked, triggers navigation to the HeroesComponent. 
+The routerLink is the selector for the RouterLink directive that turns user clicks 
+into router navigations. It's another of the public directives in the RouterModule.-->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+  </nav>
+
+<!-- <app-heroes></app-heroes> -->
+<!-- replace the <app-heroes> element with a <router-outlet> element. -->
+<!-- AppComponent template no longer needs <app-heroes> because the app will 
+only display the HeroesComponent when the user navigates to it. 
+<router-outlet> tells the router where to display routed views.-->
+<router-outlet></router-outlet>
+<app-messages></app-messages>
